@@ -2,128 +2,157 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Vitória</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background-color: #f0f0f0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Vetória</title>
+    <style>
+  
+        
+        .container {
+            display: flex;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 900px;
+            max-width: 90%;
+            min-height: 550px;
+        }
 
-    .section {
-      display: flex;
-      align-items: center;
+        
+        .acesso {
+            background-color: white;
+            padding: 50px 60px;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-    }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 40px;
+        }
 
-    .container {
-      background-color: #ca1818;
-      padding: 40px;
-      border-radius: 10px;
-      width: 100%;
-      max-width: 200px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      text-align: center;
-    }
+     
+        .cabecalho p {
+            color: #777;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
 
-    .container_color {
-      display: flex;
-      background-color: aqua;
-      border-radius: 10px;
-      width: 100%;
-      max-width: 280px;
-      height: 420px;
+        
+       
+     
 
-    }
+        input[type="email"],
+        input[type="password"] {
+            padding: 12px 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
 
-    .header h1 {
-      color: white;
-      margin-bottom: 5px;
-    }
+        
+        .btn-acessar {
+            background-color: #6a67f1;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
 
-    .header p {
-      color: #ffddd2;
-      margin-top: 0;
-      margin-bottom: 20px;
-    }
+        .btn-acessar:hover {
+            background-color: #524fd0;
+        }
 
-    .formulario {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      text-align: left;
-    }
+       
+        .cadastro {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+        }
 
-    label {
-      font-weight: bold;
-      color: white;
-      margin-bottom: -5px;
-    }
+        .cadastro a {
+            color: #6a67f1;
+            text-decoration: none;
+            font-weight: 600;
+        }
 
-    input[type="text"],
-    input[type="password"] {
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-      width: 100%;
-      box-sizing: border-box;
-    }
+        
+        .info {
+            background-color: #171556; 
+            padding: 50px;
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+        }
 
-    .botao-entrar {
-      background-color: #ff7300;
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 18px;
-      margin-top: 15px;
-      transition: background-color 0.3s;
-    }
+        .info h2 {
+            font-size: 32px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
 
-    .botao-entrar:hover {
-      background-color: #002b58;
-    }
-  </style>
-  </style>
+        .info p {
+            font-size: 16px;
+            color: #b3b3e6;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="section">
-    <div class="containe_color">
-      <div class="header_container">
-        <h1>Bem vinde</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare nunc sit amet eros egestas, id
-          congue ante fringilla. Interdum et malesuada fames ac ante.</p>
-      </div>
-    </div>
     <div class="container">
-      <div class="header">
-        <h1>Login</h1>
-        <p>Feito por Vitória</p>
-      </div>
-      <form class="formulario">
-        <div>
-          <label for="nome-usuario">Nome:</label>
-          <input type="text" id="nome-usuario" placeholder="Digite seu nome" required>
+        <div class="acesso">
+            <header>
+                <div class="logo">Vetória</div>
+            </header>
+
+            <main>
+                <div class="cabecalho">
+                    <h2>Bem vindo de volta</h2>
+                    <p>Com seu e-mail e sua senha acesse sua conta.</p>
+                </div>
+
+                <form>
+                    <div class="campo">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="email@gmail.com">
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha">
+                    </div>
+
+                    <button type="submit" class="btn-acessar">Acessar</button>
+                </form>
+
+                <p class="cadastro">
+                    Não tem uma conta.<a href="#"> Faça seu registro!</a>
+                </p>
+            </main>
         </div>
-        <div>
-          <label for="senha-usuario">Senha:</label>
-          <input type="password" id="senha-usuario" placeholder="Digite sua senha" required>
+
+        
+        <div class="info">
+            <h2>Vetória com o público</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel.</p>
         </div>
-        <button type="submit" class="botao-entrar">Entrar</button>
-      </form>
     </div>
-  </div>
 </body>
 
 </html>
