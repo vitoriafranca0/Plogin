@@ -2,157 +2,184 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Vetória</title>
-    <style>
-  
-        
-        .container {
-            display: flex;
-            border-radius: 10px;
-            overflow: hidden;
-            width: 900px;
-            max-width: 90%;
-            min-height: 550px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Vetória</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+    }
 
-        
-        .acesso {
-            background-color: white;
-            padding: 50px 60px;
-            width: 45%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
 
-        
-        .logo {
-            font-size: 20px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 40px;
-        }
+    .container {
+      display: flex;
+      border-radius: 5px;
+      overflow: hidden;
+      width: 900px;
+      max-width: 90%;
+      min-height: 550px;
+    }
 
-     
-        .cabecalho p {
-            color: #777;
-            margin-top: 0;
-            margin-bottom: 30px;
-            font-size: 14px;
-        }
 
-        
-       
-     
+    .acesso {
+      background-color: white;
+      padding: 50px 60px;
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-        input[type="email"],
-        input[type="password"] {
-            padding: 12px 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            width: 100%;
-            box-sizing: border-box;
-            transition: border-color 0.3s;
-        }
 
-        
-        .btn-acessar {
-            background-color: #6a67f1;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            width: 100%;
-            transition: background-color 0.3s;
-        }
+    .logo {
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 32px;
+    }
 
-        .btn-acessar:hover {
-            background-color: #524fd0;
-        }
 
-       
-        .cadastro {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 14px;
-        }
+    .cabecalho h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 10px;
+    }
 
-        .cadastro a {
-            color: #6a67f1;
-            text-decoration: none;
-            font-weight: 600;
-        }
+    .cabecalho p {
+      color: #777;
+      margin-top: 0;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
 
-        
-        .info {
-            background-color: #171556; 
-            padding: 50px;
-            width: 55%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            color: white;
-        }
 
-        .info h2 {
-            font-size: 32px;
-            line-height: 1.3;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
 
-        .info p {
-            font-size: 16px;
-            color: #b3b3e6;
-        }
-    </style>
+    label {
+      display: block;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      padding: 12px 10px;
+      border: 1px solid #ddd;
+      border-radius: 50px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+
+
+    .btn-acessar {
+      background-color: #eda353;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      width: 100%;
+      margin-top: 42px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-acessar:hover {
+      background-color: #ed8b53;
+    }
+
+
+    .cadastro {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    .cadastro a {
+      color: rgba(237, 163, 83, 1);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+
+    .info {
+      background: #171556;
+      background: linear-gradient(45deg, #171556 0%, #fc79a5 60%, #eda353 100%);
+      padding: 50px;
+      width: 55%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white;
+    }
+
+    .info h2 {
+      font-size: 32px;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .info p {
+      font-size: 16px;
+      color: #f8f8ff;
+    }
+
+    span {
+      color: rgba(237, 163, 83, 1);
+    }
+  </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="acesso">
-            <header>
-                <div class="logo">Vetória</div>
-            </header>
+  <div class="container">
+    <div class="acesso">
+      <header>
+        <div class="logo">Vetória</div>
+      </header>
 
-            <main>
-                <div class="cabecalho">
-                    <h2>Bem vindo de volta</h2>
-                    <p>Com seu e-mail e sua senha acesse sua conta.</p>
-                </div>
-
-                <form>
-                    <div class="campo">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="email@gmail.com">
-                    </div>
-
-                    <div class="campo">
-                        <label for="senha">Senha</label>
-                        <input type="password" id="senha">
-                    </div>
-
-                    <button type="submit" class="btn-acessar">Acessar</button>
-                </form>
-
-                <p class="cadastro">
-                    Não tem uma conta.<a href="#"> Faça seu registro!</a>
-                </p>
-            </main>
+      <main>
+        <div class="cabecalho">
+          <h2>Bem vindo de <span>volta</span></h2>
+          <p>Com seu e-mail e sua senha acesse sua conta.</p>
         </div>
 
-        
-        <div class="info">
-            <h2>Vetória com o público</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel.</p>
-        </div>
+        <form>
+          <div class="campo">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="email@gmail.com">
+          </div>
+
+          <div class="campo">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha">
+          </div>
+
+          <button type="submit" class="btn-acessar">Acessar</button>
+        </form>
+
+        <p class="cadastro">
+          Não tem uma conta.<a href="#"> Faça seu registro!</a>
+        </p>
+      </main>
     </div>
+
+
+    <div class="info">
+      <h2>Vetória com o público</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel.</p>
+    </div>
+  </div>
 </body>
 
 </html>
